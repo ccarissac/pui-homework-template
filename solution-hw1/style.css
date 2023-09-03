@@ -1,0 +1,208 @@
+/* [top] [right] [bottom] [left]: */
+
+/* Title Area */
+.main-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+}
+
+.product-logo{
+    width: 200px;
+}
+
+/* Menu Navigation */
+.menu-products{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: yellow;
+    color: #000000;
+    text-align: center;
+    /* width: 80px; */
+
+}
+/* .menu-products:hover{
+    background-color: yellow;
+    font-weight: 700;
+    background-size:contain;
+}  */
+
+.menu-cart{
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.menu-cart:hover{
+    background-color: yellow;
+    /* font-weight: 700; */
+}
+
+.tagline{
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Menu */
+.gallery{
+    width: 400px;
+    margin: 0px auto 0px auto;
+}
+
+.product-name{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.product-image{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+}
+.product-og{
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+.product-og:hover{
+    /* width:auto;
+    height: auto; */
+    background-color: yellow;
+}
+
+.product-image-og{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-apple{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-raisin{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-walnut{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-double{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-strawberry{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-vanilla{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+.product-image-gluten{
+    border: 3px solid black;
+    width: 400px;
+    box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
+}
+
+/*Cart*/
+.cart-title{
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    color: #000000;
+    text-align: center;
+}
+
+.cart{
+    text-align: center;
+}
+.cart-product-image-og{
+    border: 3px solid black;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.cart-product-name{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 100;
+    color: #000000;
+    text-align: center;
+}
+
+.cart-product-image-double{
+    border: 3px solid black;
+    width: 200px;
+    box-sizing: border-box;
+}
+/*<-- Product Detail -->*/
+.detail-product{
+    text-align: center;
+}
+
+.detail-product-image-og{
+    border: 3px solid black;
+    width: 600px;
+    box-sizing: border-box;
+}
+
+.detail-product-blurb{
+    text-align: left;
+    width: 180px;
+}
+
