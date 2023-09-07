@@ -1,6 +1,12 @@
 /* [top] [right] [bottom] [left]: */
 
 /* Title Area */
+.bottom-thic-line{
+    border: none;
+    height: 3px;
+    color: black;
+    background-color: black;
+}
 .main-title{
     font-family: 'Times New Roman', Times, serif;
     font-size: 32px;
@@ -17,18 +23,27 @@
 .menu-products{
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 16px;
-    font-weight: 700;
-    background-color: yellow;
+    font-weight: 400;
     color: #000000;
     text-align: center;
-    /* width: 80px; */
-
 }
-/* .menu-products:hover{
+
+/* .active{
     background-color: yellow;
-    font-weight: 700;
-    background-size:contain;
-}  */
+    font-weight: 800;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-weight: 800;
+} */
+.menu-products:hover{
+    background-color: yellow;
+    width:100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-weight: 800;
+}
 
 .menu-cart{
     text-align: center;
@@ -40,7 +55,11 @@
 
 .menu-cart:hover{
     background-color: yellow;
-    /* font-weight: 700; */
+    font-weight: 800;
+    width:60px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .tagline{
@@ -61,11 +80,25 @@
     font-size: 12px;
     font-weight: 400;
 }
+
+.product-name:hover{
+    font-weight: 800;
+}
 .product-image{
     border: 3px solid black;
     width: 400px;
     box-sizing: border-box;
+    align-content: center;
+    width:400px;
+    display:block;
+    margin:auto;
 }
+/*getcssscan fixing underline*/
+a {
+    text-decoration: none;
+    color: black;
+  }
+
 .product-og{
     align-content: center;
     width:400px;
@@ -78,94 +111,20 @@
     background-color: yellow;
 }
 
-.product-image-og{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-apple{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-raisin{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-walnut{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-double{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-strawberry{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-vanilla{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
-.product-image-gluten{
-    border: 3px solid black;
-    width: 400px;
-    box-sizing: border-box;
-    align-content: center;
-    width:400px;
-    display:block;
-    margin:auto;
-}
-
 /*Cart*/
 .cart-title{
     text-align: center;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 400;
     color: #000000;
-    text-align: center;
+}
+
+select{
+    width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .cart{
@@ -180,7 +139,7 @@
 .cart-product-name{
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 400;
     color: #000000;
     text-align: center;
 }
@@ -190,9 +149,20 @@
     width: 200px;
     box-sizing: border-box;
 }
+
+.highlight-button{
+    background-color: yellow;
+    width: 120px;
+    height: 30px;
+    font-weight: 800;
+    border: 3px solid black;
+}
+
+
 /*<-- Product Detail -->*/
 .detail-product{
     text-align: center;
+    /* width: 400px; */
 }
 
 .detail-product-image-og{
@@ -201,8 +171,44 @@
     box-sizing: border-box;
 }
 
-.detail-product-blurb{
-    text-align: left;
-    width: 180px;
+.checkout-line{
+    border: none;
+    height: 3px;
+    color: black;
+    background-color: black;
+    width:1080px;
 }
 
+/* .detail-product-og-container{
+    box-sizing: border-box;
+
+} */
+
+
+.detail-product-blurb{
+    /* width: 180px;*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.product-detail-text{   
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.remove{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.pack-select{
+    margin: 600,auto,600,auto;
+}

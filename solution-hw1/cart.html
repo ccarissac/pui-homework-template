@@ -5,13 +5,16 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   
   <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    </style>
     <h1 class="main-title"> Shopping Cart</h1>
     <hr>
     <a href="index.html"> <img src="../assets/logo/logo-01.svg" 
     width="200"
     alt="Bun Bun Bake Shop Logo"
     class="product-logo"/> </a>
-    <hr>
+    <hr class="bottom-thic-line">
 
     <div class="menu">
       <a href="index.html"><h4 class="menu-products">
@@ -32,17 +35,26 @@
     <div class= "cart">
         <img class="cart-product-image-og" src="../assets/products/original-cinnamon-roll.jpg"
         width="200"/>
-        <h4 class="cart-product-name">
+        <p class="remove">Remove</p>
+        <h4 class="cart-title">
             Original Cinnamon Roll <br> Glazing: Keep Original <br> Pack Size: 1 <br><br> $2.49
         </h4>
 
         <img class="cart-product-image-double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"
         width="200"/>
-        <h4 class="cart-product-name">
+        <p class="remove">Remove</p>
+        <h4 class="cart-title">
             Double Chocolate Cinnamon Roll <br> Glazing: Sugar Milk <br> Pack Size: 6 <br><br> $27.45
         </h4>
        
     </div>
+
+    <hr class="checkout-line">
+    <h2 class="cart-title">
+        Total: $29.94 <br>
+        <button type="button" class="highlight-button">Checkout</button>
+    </h2>
+    
 
   </body>
 </html>
