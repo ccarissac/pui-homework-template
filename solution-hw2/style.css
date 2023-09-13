@@ -1,0 +1,117 @@
+/* Type Styling */
+body{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h3{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Menu Options */
+.menu{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-cart{
+    width: 100px;
+    margin: 8px 4px 20px;
+    padding: 4px;
+}
+.menu-cart:hover{
+    font-weight:800;
+    background-color: yellow;
+}
+
+.menu-products{
+    width: 100px;
+    box-sizing: border-box;
+    padding: 4px;
+    margin: 8px 4px 20px;
+    background-color: aqua;
+}
+
+.menu-products:hover{
+    font-weight:800;
+    background-color: yellow;
+}
+
+/* Header Code */
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-logo{
+    width: 300px;
+    padding: 8px;
+    margin: 4px 12px 4px 4px;
+}
+.right-header{
+    width: 100%;
+} 
+
+.thic-line{
+    border: none;
+    height: 3px;
+    margin: 50px 0px;
+    color: black;
+    background-color: black;
+    justify-content: flex-end;
+}
+
+
+/* Menu Flex Display */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width:1200px;
+    margin:20px
+}
+
+.products{
+    margin:20px;
+    padding: 8px;
+}
+
+.products:hover{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.product-image{
+    border: 3px solid black;
+    box-sizing: border-box;
+    align-content: center;
+    display:block;
+}
+
+.products:hover{
+    background-color: yellow;
+}
+
+.product-name{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgb(105, 105, 105);
+}
+
+.product-price{
+    font-weight: 400;
+}
+/* .product-name:hover{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+} */
