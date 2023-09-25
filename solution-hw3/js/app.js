@@ -25,10 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectGlaze = document.getElementById("glazingOptions");
     for (var j = 0; j < bunGlaze.length; j++) {
         var bunOption = document.createElement("option");
-        bunOption.text=bunGlaze[j].option;
-        bunOption.value=bunGlaze[j].price;
+        bunOption.text = bunGlaze[j].option;
+        bunOption.value = bunGlaze[j].price;
         selectGlaze.add(bunOption);
     }
+    selectGlaze.addEventListener("change", newPrice);
 });
 
 //Count Array
@@ -60,22 +61,29 @@ document.addEventListener('DOMContentLoaded', function() {
         countOption.value=allCount[j].adapt;
         selectCount.add(countOption);
     }
+    selectCount.addEventListener("change", newPrice);
 });
 
 //Initial values
-let basePrice=2.49;
-let bunPrice= 0;
-let bunCount= 1;
-document.getElementById("glazingOptions").addEventListener("change", newPrice);
-document.getElementById("countOptions").addEventListener("change", newPrice);
+let basePrice =2.49;
+let bunPrice = 0;
+let bunCount = 1;
+// document.getElementById("glazingOptions").addEventListener("change", newPrice);
+// document.getElementById("countOptions").addEventListener("change", newPrice);
 
 function glazingChange(){
-    let bunPrice= document.getElementById("glazingOptions").value;
-    console.log (bunPrice);
-}
+    bunPrice = document.getElementById("countOptions").value;
+    newPrice();
+    // let currGlazing=bunGlaze[this.value];
+    // var bunPrice=currGlazing.price;
+    console.log(bunPrice);
+    // let bunPrice= document.getElementById("glazingOptions").value;
+    // document.getElementById("glazingOptions").addEventListener("change", newPrice);
+};
 
 function countChange(){
-    let bunCount= document.getElementById("countOptions").value;
+    bunCount = parseInt(document.getElementById("countOptions").value);
+    newPrice();
     console.log (bunCount);
     // document.getElementById("countOptions").addEventListener("DOMContentLoaded", newPrice);
     }
@@ -86,13 +94,27 @@ function countChange(){
 //     console.log(bunCount);
 //     document.getElementById("countOptions").addEventListener("change", newPrice);
 //     }
-
+console.log("outside"+bunPrice);
 
 function newPrice() {
-    calcPrice=(basePrice+bunPrice)*bunCount;
-    console.log(calcPrice);
-    document.getElementById("detail-price").innerHTML = "$" +calcPrice.toFixed(2);
+    let calcPrice = (basePrice+bunPrice)*bunCount;
+    console.log("ahhhh"+calcPrice);
+    console.log("ahdhdh"+bunPrice);
+    console.log("hcj"+bunCount);
+    document.querySelector(".detail-price").innerText = "$" +calcPrice.toFixed(2);
 }
+
+newPrice();
+
+    
+    // let bunPrice = parseFloat(document.getElementById("glazingOptions").value);
+    // let bunCount = parseInt(document.getElementById("countOptions").value);
+
+    // let calcPrice = (basePrice + bunPrice) * bunCount;
+    // let priceElement = document.querySelector(".detail-price");
+    // priceElement.innerText = "$" + calcPrice.toFixed(2);
+
+
 
     // const priceChange =element.value;
     // (basePrice+glazingPrice)*packPrice;
