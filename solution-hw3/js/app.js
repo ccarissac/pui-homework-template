@@ -19,19 +19,6 @@ let bunGlaze =[
     },
 ];
 
-
-//Loading glaze the dropdown menu
-document.addEventListener('DOMContentLoaded', function() {
-    let selectGlaze = document.getElementById("glazingOptions");
-    for (var j = 0; j < bunGlaze.length; j++) {
-        var bunOption = document.createElement("option");
-        bunOption.text = bunGlaze[j].option;
-        bunOption.value = bunGlaze[j].price;
-        selectGlaze.add(bunOption);
-    }
-    selectGlaze.addEventListener("change", newPrice);
-});
-
 //Count Array
 let allCount = [
     {
@@ -52,11 +39,23 @@ let allCount = [
     },
 ]
 
+//Loading glaze the dropdown menu
+document.addEventListener('DOMContentLoaded', function() {
+    let selectGlaze = document.getElementById("glazingOptions");
+    for (let j = 0; j < bunGlaze.length; j++) {
+        let bunOption = document.createElement("option");
+        bunOption.text = bunGlaze[j].option;
+        bunOption.value = bunGlaze[j].price;
+        selectGlaze.add(bunOption);
+    }
+    selectGlaze.addEventListener("change", newPrice);
+});
+
 //Loading count dropdown menu
 document.addEventListener('DOMContentLoaded', function() {
     let selectCount = document.getElementById("countOptions");
-    for (var j = 0; j < allCount.length; j++) {
-        var countOption = document.createElement("option");
+    for (let j = 0; j < allCount.length; j++) {
+        let countOption = document.createElement("option");
         countOption.text=allCount[j].size;
         countOption.value=allCount[j].adapt;
         selectCount.add(countOption);
@@ -65,46 +64,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //Initial values
-let basePrice =2.49;
+let basePrice =2.49;;
 let bunPrice = 0;
 let bunCount = 1;
-// document.getElementById("glazingOptions").addEventListener("change", newPrice);
-// document.getElementById("countOptions").addEventListener("change", newPrice);
 
 function glazingChange(){
-    bunPrice = document.getElementById("countOptions").value;
-    newPrice();
-    // let currGlazing=bunGlaze[this.value];
-    // var bunPrice=currGlazing.price;
+    bunPrice= parseFloat(document.getElementById("glazingOptions").value);
     console.log(bunPrice);
-    // let bunPrice= document.getElementById("glazingOptions").value;
-    // document.getElementById("glazingOptions").addEventListener("change", newPrice);
-};
+    document.getElementById("glazingOptions").addEventListener("change", newPrice);
+    newPrice();
+    }
 
 function countChange(){
-    bunCount = parseInt(document.getElementById("countOptions").value);
-    newPrice();
+    bunCount= parseInt(document.getElementById("countOptions").value);
     console.log (bunCount);
-    // document.getElementById("countOptions").addEventListener("DOMContentLoaded", newPrice);
+    document.getElementById("countOptions").addEventListener("change", newPrice);
+    newPrice();
     }
-    // 
 
-// function countChange() {
-//     let bunCount= document.getElementById("countOptions").value;
-//     console.log(bunCount);
-//     document.getElementById("countOptions").addEventListener("change", newPrice);
-//     }
-console.log("outside"+bunPrice);
 
 function newPrice() {
-    let calcPrice = (basePrice+bunPrice)*bunCount;
-    console.log("ahhhh"+calcPrice);
-    console.log("ahdhdh"+bunPrice);
-    console.log("hcj"+bunCount);
-    document.querySelector(".detail-price").innerText = "$" +calcPrice.toFixed(2);
-}
+        // price=bunPrice;
+        // console.log("end "+price);
+        // bunCount=countChange();
+        let calcPrice = (basePrice + bunPrice) * bunCount;
+        // console.log("endcalc"+calcPrice);
+        // console.log("endprice"+bunPrice);
+        // console.log("endcount"+bunCount);
+        document.querySelector(".detail-price").innerText = "$" + calcPrice.toFixed(2);
+    }
 
 newPrice();
+
+
 
     
     // let bunPrice = parseFloat(document.getElementById("glazingOptions").value);
