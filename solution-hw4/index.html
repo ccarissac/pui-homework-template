@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Bun Bun Bake Shop</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <script defer src="js/app.js"></script>
+  <!-- <script src="js/rollsData.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  </style>
+
+  <div class="header">
+    <a href="index.html"><img src="../assets/logo/logo-01.svg" width="200" alt="Bun Bun Bake Shop Logo" class="product-logo" /></a>
+    <div class="right-header">
+      <div class="menu">
+        <a href="index.html"><h4 class="menu-products">PRODUCTS</h4></a>
+        <a href="cart.html"><h4 class="menu-cart">CART</h4></a>
+      </div>
+      <hr class="thic-line">
+      <h3 class="tagline">Our hand-made cinnamon rolls</h3>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- HTML Anchor Elements: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/search -->
+  <!-- Linking to another page: https://itecnote.com/tecnote/javascript-how-to-keep-url-query-parameters-when-following-a-link/ -->
+  <div class="gallery">
+    <a onclick="window.location.href='./product-detail.html?roll=Original';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/original-cinnamon-roll.jpg" width="285" alt="Photo of Original Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Original Cinnamon Roll</p>
+        <p class="product-price">$2.49</p>
+      </div>
+    </a>
+
+    <a onclick="window.location.href='./product-detail.html?roll=Apple';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/apple-cinnamon-roll.jpg" width="285" alt="Photo of Apple Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Apple Cinnamon Roll</p>
+        <p class="product-price">$3.49</p>
+      </div>
+    </a>
+
+
+    <a onclick="window.location.href='./product-detail.html?roll=Raisin';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/raisin-cinnamon-roll.jpg" width="285" alt="Photo of Raisin Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Raisin Cinnamon Roll</p>
+        <p class="product-price">$2.99</p>
+      </div>
+    </a>
+
+    <a onclick="window.location.href='./product-detail.html?roll=Walnut';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/walnut-cinnamon-roll.jpg" width="285" alt="Photo of Walnut Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Walnut Cinnamon Roll</p>
+        <p class="product-price">$3.49</p>
+      </div>
+    </a>
+
+    <a onclick="window.location.href='./product-detail.html?roll=Double-Chocolate';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/double-chocolate-cinnamon-roll.jpg" width="285" alt="Photo of Double Chocolate Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Double Chocolate Cinnamon Roll</p>
+        <p class="product-price">$3.99</p>
+      </div>
+    </a>
+
+    <a onclick="window.location.href='./product-detail.html?roll=Strawberry';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/strawberry-cinnamon-roll.jpg" width="285" alt="Photo of Strawberry Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Strawberry Cinnamon Roll</p>
+        <p class="product-price">$3.99</p>
+      </div>
+    </a>
+
+    <a onclick="window.location.href='./product-detail.html?roll=Vanilla';">
+      <div class="products">
+        <img class="product-image" src="../assets/products/vanilla-cinnamon-roll.jpg" width="285" alt="Photo of Vanilla Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Vanilla Cinnamon Roll</p>
+        <p class="product-price">$2.49</p>
+      </div>
+    </a>
+
+    <a href="product-detail.html">
+      <div class="products">
+        <img class="product-image" src="../assets/products/gluten-free-cinnamon-roll.jpg" width="285" alt="Photo of Gluten-Free Cinnamon Roll, looking delicious"/>
+        <p class="product-name">Gluten-Free Cinnamon Roll</p>
+        <p class="product-price">$2.49</p>
+      </div>
+    </a>
+  </div>
+
+
+</body>
+
+</html>
