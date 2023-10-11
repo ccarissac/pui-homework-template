@@ -138,8 +138,8 @@ console.log("clicked!");
 
 function cartAdd () {
     // console.log("cartAdd function called");
-    let rollGlaze = selectGlaze.options[selectGlaze.selectedIndex].text;
-    let packSize = selectCount.options[selectCount.selectedIndex].text;
+    // let rollGlaze = selectGlaze.options[selectGlaze.selectedIndex].text;
+    // let packSize = selectCount.options[selectCount.selectedIndex].text;
     cartRoll= new Roll(rollType, rollGlaze, packSize, baseRollPrice);
         // console.log("cartAdd function called");
         cart.push(cartRoll);
