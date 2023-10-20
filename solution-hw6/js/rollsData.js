@@ -267,14 +267,10 @@ function cartTotal() {
 
 //creating and adding new roll to set
 function addNewRoll(rollType, rollGlaze, packSize, basePrice) {
-    // console.log("Roll type: " + rollType);
-    // console.log("Roll glaze: " + rollGlaze);
-    // console.log("Pack size: " + packSize);
-    // console.log("Base price: $" + basePrice);
     const roll = new Roll(rollType, rollGlaze, packSize, basePrice);
-    console.log("New roll created: ", roll);
+    // console.log("New roll created: ", roll);
     cartRollSet.add(roll);
-    console.log("Roll added to the cart.");
+    // console.log("Roll added to the cart.");
 
     console.log("Current cart contents: ", cartRollSet);
     return roll;
@@ -292,32 +288,9 @@ function cartAdd() {
     
     saveToLocalStorage();
     console.log("Data saved to local storage.");
-
-    // console.log("cartadd "+ cartRollSet);
-
-    // createElement(roll); // Add this line to update the UI
-    // updateCartTotal();
 }
 
 //cart code for saving and retrieving from local storage
-// function submitRoll() {
-//     const rollEditorTitle = document.querySelector(".detail-tagline").innerHTML.replace(" Cinnamon Roll","");
-//     const rollEditorGlaze = this.glazing;
-//     const rollEditorSize = this.size;
-//     const rollEditorPrice = document.querySelector(".detail-price").innerHTML;
-
-//     const roll = addNewRoll(rollEditorTitle, rollEditorGlaze, rollEditorSize, rollEditorPrice);
-
-//     saveToLocalStorage();
-
-//     console.log("roll editor title " + rollEditorTitle);
-//     console.log("roll editor glaze " + rollEditorGlaze);
-//     console.log("roll editor size " + rollEditorSize);
-//     console.log("roll editor price " + rollEditorPrice);
-
-//     console.log("roll added to cart");
-// }
-
 function saveToLocalStorage() {
     const cartRollArray = Array.from(cartRollSet);
 
@@ -339,21 +312,6 @@ function retrieveFromLocalStorage() {
     console.log("retrieved local");
     return cartShoppingRollArray
 }
-
-// function retrieveFromPreviousLocalStorage() {
-//     const cartRollArrayString = localStorage.getItem("cartItems");
-//     if (cartRollArrayString) {
-//         const cartRollArray = JSON.parse(cartRollArrayString)
-//         console.log("previous " + cartRollArray);
-//         for (const roll of cartRollArray) {
-//             const newRoll = addNewRoll(roll.type, roll.glazing, roll.size, roll.basePrice);
-//         }
-//     }
-//     console.log("retrieved previous");
-//     // return cartRollArray
-//     return cartRollArray
-// }
-
 
 if (localStorage.getItem("cartItems") !== null) {
     retrieveFromLocalStorage();
