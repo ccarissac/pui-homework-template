@@ -1,6 +1,6 @@
-import './style.css'
+// import './style.css'
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/addons/controls/OrbitControls';
 // import GIF from 'gif.js';
 // image credits
     //flare image: https://opengameart.org/content/flare-effect-blender
