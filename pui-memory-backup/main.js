@@ -325,7 +325,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     }
 
     //SMOKE TEXTURE
-    const smokeTexture = new THREE.TextureLoader().load("../materials/smoke_orange.png");
+    const smokeTexture = new THREE.TextureLoader().load("/materials/smoke_orange.png");
     smokeTexture.encoding = THREE.sRGBEncoding;
     const smokeGeometry = new THREE.PlaneGeometry(300,300); //set size of plane
     
