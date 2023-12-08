@@ -6,11 +6,9 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     //smoke image: https://opengameart.org/content/flare-effect-blender
 
 //code references: 
-//https://stackoverflow.com/questions/21710049/animated-gif-as-texture-in-three-js
-//https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 //Smoke Effect code: https://www.youtube.com/watch?v=otavCmIuEhY
-//https://www.hongkiat.com/blog/on-click-animated-gif/
-//GIF.js https://jnordberg.github.io/gif.js/
+//Image update code referenced from previous homeworks
+
     console.log("starting load");
 
     let clock = new THREE.Clock(); //keep track of time
@@ -34,7 +32,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     renderer.setSize( window.innerWidth, window.innerHeight );
 
     //SMOKE
-    // document.body.appendChild(renderer.domElement);
     renderer.domElement.id = "smoke-3d";
     document.body.querySelector("#smoke-3d").appendChild(renderer.domElement);
     const smoke3DElement = document.body.querySelector("#smoke-3d");
@@ -45,46 +42,11 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     const light = new THREE.HemisphereLight ( 0xd6e6ff, 0xa38c08, 1);
     scene.add( light ); 
 
-    //GIF TEXTURE
-    // Load GIF texture
-    // const textureLoader = new THREE.TextureLoader();
-    // const gifUrl = '../Memories/test-memory.gif'; // Replace with the actual path to your GIF
-    // const gifTexture = textureLoader.load(gifUrl);
-
     //ORBIT CONTROLS
     const controls = new OrbitControls(camera, renderer.domElement);
     const raycaster = new THREE.Raycaster(); //mouse click events
     const mouse = new THREE.Vector2();
 
-    // function playGifAtCursor(gifUrl) {
-    //     // Set the position of the GIF container based on the cursor position
-    //     const gifContainer = document.createElement('div');
-    //     gifContainer.style.position = 'absolute';
-    //     gifContainer.style.left = event.clientX + 'px';
-    //     gifContainer.style.top = event.clientY + 'px';
-    //     document.body.appendChild(gifContainer);
-    //     console.log(gifUrl);
-    
-    //     // Create a new GIF instance
-    //     const gifInstance = new GIF({
-    //         workers: 2,
-    //         quality: 10,
-    //     });
-    
-    //     // Load the GIF URL
-    //     gifInstance.load(gifUrl);
-    
-    //     // Append the GIF container to the DOM
-    //     gifContainer.appendChild(gifInstance.renderer.domElement);
-    
-    //     // Play the GIF
-    //     gifInstance.play();
-    
-    //     // Remove the GIF container after the GIF has played
-    //     gifInstance.on('finished', function () {
-    //         document.body.removeChild(gifContainer);
-    //     });
-    // }
     //GET MEMORY 
     const imageArray = [
         {
@@ -210,16 +172,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     
     console.log(imageArray[0].memoryName);
     
-    // class Memory {
-    //     constructor(memoryName, memoryDate, memoryPeople, memoryImageFile, memoryDescription) {
-    //         this.name = memoryName;
-    //         this.date = memoryDate;
-    //         this.people = memoryPeople;
-    //         this.image = memoryImageFile; 
-    //         this.description = memoryDescription;
-    //     }
     function getMemory() {
-        // const memory = new Memory(memoryName, memoryDate, memoryPeople, memoryImageFile, memoryDescription);
+ 
         const min = 0;
         const max = imageArray.length;
     
@@ -242,12 +196,12 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
         const cardImageElement = document.querySelector(".memory-image");
         const cardDescriptionElement = document.querySelector(".memory-description");
     
-        // console.log ("test updateElement");
-        console.log("update element memoryCard Name", memoryCard.memoryName);
-        console.log("update element memoryCard Date", memoryCard.memoryDate);
-        console.log("update element memoryCardPeople", memoryCard.memoryPeople);
-        console.log("update element memoryCardImage", memoryCard.memoryImageFile);
-        console.log("update element memoryCardDescription", memoryCard.memoryDescription);
+        // console.log to check elements
+        // console.log("update element memoryCard Name", memoryCard.memoryName);
+        // console.log("update element memoryCard Date", memoryCard.memoryDate);
+        // console.log("update element memoryCardPeople", memoryCard.memoryPeople);
+        // console.log("update element memoryCardImage", memoryCard.memoryImageFile);
+        // console.log("update element memoryCardDescription", memoryCard.memoryDescription);
 
         if (cardNameElement && cardDateElement && cardPeopleElement && cardImageElement && cardDescriptionElement) {
             cardNameElement.innerText = memoryCard.memoryName;
@@ -262,17 +216,9 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
     }
 
     //POPUP WINDOW
-
-        
-    // Append the popup to the body
     function displayPopup() {
         console.log("Displaying popup");
         const memoryCard = getMemory();
-
-        if (!memoryCard) {
-            console.error("Invalid memory card. Popup will not be displayed.");
-            return;
-        }
 
         const memoryPopupOpen = document.querySelector(".memory-container");
         console.log("memoryPopup = ", memoryPopupOpen);
@@ -284,27 +230,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
             console.error("Memory container not found.");
         }
 
-        // const popupTemplate = document.querySelector(".popup-template");
-        // console.log("Popup template found:", popupTemplate);
-        // if (!popupTemplate){
-        //     console.log("template not found");
-        //     return;
-        // } 
-        // const popupWrapper = document.createElement('div');
-        // popupWrapper.innerHTML = popupTemplate.innerHTML;
-
-        // Append the popup to the body
-        // document.body.appendChild(popupWrapper);
-        // console.log("Popup element:", popupWrapper);
-        
-        // document.body.appendChild(popupContent);
-        // console.log("Popup element:", popupContent);
-
-        // const popupContent = popupTemplate.content.cloneNode(true);
-        // const popupElement = popupTemplate.cloneNode(true);
-
-        
-
 
         const btnDelete = document.querySelector(".memory-remove");
         console.log("delete button found");
@@ -313,7 +238,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
             btnDelete.addEventListener("click", closePopup);
             console.log("Delete button click event added.");
         } else {
-            console.error("Button with class 'memory-remove' not found in cloned content.");
+            console.error("Button not found rip.");
         }
     }
 
@@ -374,13 +299,13 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
         if (intersects.length > 0) {
             // Log the position of clicked smoke
             console.log('Selected Smoke Element Position:', intersects[0].object.position);
-            // playGifAtCursor(event.clientX, event.clientY);
 
             displayPopup();
 
         }
     }
 
+    //RESIZE
     document.addEventListener('click', onClick, false);
 
     window.addEventListener ("resize", onWindowResize);
