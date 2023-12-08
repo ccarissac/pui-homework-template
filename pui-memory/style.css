@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #1a1a1a;
 }
 
 :root {
@@ -159,5 +160,10 @@ h3 {
 
 p {
   font-size: 1em;
+  font-family: 'Kalam', cursive;;
   color: black;
+}
+
+.memory-remove {
+  font-size: 0.75em;
 }

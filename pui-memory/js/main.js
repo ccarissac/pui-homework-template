@@ -189,7 +189,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
             memoryName: "Skater Bois",
             memoryDate: "December 12, 2022",
             memoryPeople: "Schkatie, Schcamden, Scham, Zosche, Schtephen",
-            memoryImageFile: "hamerschlag-ice-skating.JPG",
+            memoryImageFile: "hamerschlag_ice-skating.JPG",
             memoryDescription: "At the end of the fall semester all the RAs of Hamerschlag took their residents to a local seasonal ice rink to celebrate the end of the year. The tickets were for 90 minutes, and if I'm honest I was tired by 60 and barely managed to power through the last 30 to get my money's worth.",
         },
         {
@@ -253,7 +253,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
             cardNameElement.innerText = memoryCard.memoryName;
             cardDateElement.innerText = memoryCard.memoryDate;
             cardPeopleElement.innerText = memoryCard.memoryPeople;
-            cardImageElement.src = "Memories/" + memoryCard.memoryImageFile;
+            cardImageElement.src = "./Memories/" + memoryCard.memoryImageFile;
             cardDescriptionElement.innerText = memoryCard.memoryDescription;
         }
         else {
@@ -322,6 +322,14 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls';
         document.querySelector(".memory-container").style.visibility = "hidden";
         // console.log("memoryPopupClose = ", memoryPopupClose);
     }
+
+    document.addEventListener('keydown', function (event) {
+    if (event.key === 'm') {
+        displayPopup();
+    }else if (event.key === 'Escape') {
+            closePopup();
+        }
+    }, false);
 
     //SMOKE TEXTURE
     const smokeTexture = new THREE.TextureLoader().load("./materials/smoke_orange.png");

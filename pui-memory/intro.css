@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+.project-card {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%); 
+    /* background-color: rgb(156, 156, 156);
+    background-blend-mode: multiply; */
+    padding: 2%;
+    z-index: 20;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: white;
+  }
+
+  h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    color: white;
+  }
+
+  p{
+    font-size: 0.5em;
+    color: white;
+    font-family: 'Kalam', cursive;
+  }
+
+  .project-enter {
+    text-align: center;
+    /* width: 50%; */
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-family: 'Kalam', cursive;
+  }
+
+  .project-enter:hover {
+    background-color: rgb(177, 177, 177);
+  }
+
