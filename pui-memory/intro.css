@@ -6,8 +6,6 @@ body {
     top: 25%;
     left: 25%;
     transform: translate(-25%, -25%); 
-    /* background-color: rgb(156, 156, 156);
-    background-blend-mode: multiply; */
     padding: 2%;
     z-index: 20;
   }
@@ -34,7 +32,6 @@ body {
 
   .project-enter {
     text-align: center;
-    /* width: 50%; */
     height: 50px;
     width: 200px;
     background-color: black;
